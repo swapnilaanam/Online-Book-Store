@@ -15,6 +15,11 @@ class BookController extends Controller
         return view('books.index', compact('books'));
     }
 
+    // This function helps us to view a single book (single read/show)
+    public function show(Book $book) {
+        return view('books.show', compact('book'));
+    }
+
     // gives a form(view) to create new book (create)
     public function create() {
         return view('books.create');
@@ -58,7 +63,7 @@ class BookController extends Controller
 
         return redirect()->route('books.index')->with('success', "Book Successfully Updated...");
     }
-    
+
     // deletes a book from the database (delete) 
     public function destroy(Book $book) {
         $book->delete();

@@ -94,9 +94,9 @@
                     <form action="{{ route('books.destroy', $book->id) }}" method="POST"> 
                         @csrf  
                         @method('DELETE') 
-                        <a href="{{ route('books.show', $book->id) }}" class="btn btn-success">
-                           <i class="fas fa-eye"></i> View
-                        </a>
+                        <a href="{{ route('books.show', $book->id) }}" class="btn btn-success"> 
+                           <i class="fas fa-eye"></i> View 
+                        </a> 
                         <a href="{{ route('books.edit', $book->id) }}" class="btn btn-warning mx-1"> 
                            <i class="fas fa-edit"></i> Edit 
                         </a> 
