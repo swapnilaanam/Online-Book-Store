@@ -1,0 +1,5 @@
+/* In layout.blade.php*/
+footer p {
+    margin: 0;
+    padding: 1rem;
+}
