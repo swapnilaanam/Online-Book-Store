@@ -97,9 +97,9 @@
                         <a href="{{ route('books.show', $book->id) }}" class="btn btn-success">
                            <i class="fas fa-eye"></i> View
                         </a>
-                        <a href="{{ route('books.edit', $book->id) }}" class="btn btn-warning mx-1">
-                           <i class="fas fa-edit"></i> Edit
-                        </a>
+                        <a href="{{ route('books.edit', $book->id) }}" class="btn btn-warning mx-1"> 
+                           <i class="fas fa-edit"></i> Edit 
+                        </a> 
                         <button type="submit" class="btn btn-danger">
                                 <i class="fas fa-trash"></i> Delete
                         </button>

@@ -24,3 +24,8 @@ footer p {
 #create-container > form > .form-group {
     margin-bottom: 0.8rem;
 }
+
+/* In edit.blade.php */
+#edit-container > form > .form-group {
+    margin-bottom: 0.8rem;
+}
