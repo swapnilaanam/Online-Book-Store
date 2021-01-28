@@ -91,19 +91,19 @@
                 <td class="align-middle">{{$book->published_year}}</td>
                 <td class="align-middle">{{$book->price}}</td>
                 <td>
-                    <form action="{{ route('books.destroy', $book->id) }}" method="POST">
-                        @csrf 
-                        @method('DELETE')
+                    <form action="{{ route('books.destroy', $book->id) }}" method="POST"> 
+                        @csrf  
+                        @method('DELETE') 
                         <a href="{{ route('books.show', $book->id) }}" class="btn btn-success">
                            <i class="fas fa-eye"></i> View
                         </a>
                         <a href="{{ route('books.edit', $book->id) }}" class="btn btn-warning mx-1"> 
                            <i class="fas fa-edit"></i> Edit 
                         </a> 
-                        <button type="submit" class="btn btn-danger">
-                                <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </form>
+                        <button type="submit" class="btn btn-danger"> 
+                            <i class="fas fa-trash"></i> Delete
+                        </button> 
+                    </form> 
                 </td>
             </tr>
             @endforeach
