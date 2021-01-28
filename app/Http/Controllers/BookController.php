@@ -8,8 +8,38 @@ use App\Models\Book;
 class BookController extends Controller
 {
     // This function helps us to view all the books (read)
-    public function index() {
+    public function index(Request $request) {
 
+        $books = '';
+
+        if ($request->has('sort')) {
+
+            $order = $request->get('sort');
+
+            if ($order === "book_name_asc") {
+                $books = Book::orderBy('book_name')->paginate(5);
+            }
+    
+            else if ($order === "book_name_desc") {
+                $books = Book::orderBy('book_name', 'desc')->paginate(5);
+            }
+    
+            else if ($order === "price_asc") {
+                $books = Book::orderBy('price')->paginate(5);
+            }
+    
+            else if ($order === "price_desc") {
+                $books = Book::orderBy('price', 'desc')->paginate(5);
+            }
+    
+            else if ($order === "old_to_new") {
+                $books = Book::paginate(5);
+            }
+    
+            return view('books.index', compact('books'));
+
+        }
+        
         $books = Book::latest()->paginate(5);
 
         return view('books.index', compact('books'));

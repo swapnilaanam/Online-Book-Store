@@ -13,6 +13,7 @@
     <div class="display-4 text-center my-2">All Books List</div>
     <div class="row mt-4 mb-2">
         <div class="col-sm-9 pt-2">
+            <!-- Links For Sorting Start -->
             <ul class="nav">
                 <li class="nav-item">
                     <p>Sort By: </p>
@@ -57,6 +58,7 @@
                        class="nav-text {{Request::get('sort') === 'old_to_new' ? 'text-primary' : 'text-dark'}}">Old To New</a>
                 </li>
             </ul>
+            <!-- Links For Sorting End -->
         </div>
 
         <div class="col-sm-3">
