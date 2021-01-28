@@ -110,6 +110,6 @@
         </tbody>
     </table>
     {{$books->links()}}
-    <a href="{{ route('books.create') }}" class="btn btn-primary my-2 d-block mx-auto" style="width: 12%;">Add New Book</a>    
+    <a href="{{ route('books.create') }}" class="btn btn-primary my-2 d-block mx-auto" style="width: 12%;">Add New Book</a>     
 </div>
 @endsection
