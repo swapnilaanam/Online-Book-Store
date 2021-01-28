@@ -11,3 +11,11 @@ footer p {
 .display-4 {
     font-size: 2.4rem;
 }
+
+/* In index.blade.php */
+#index-container {
+    min-height: 84.2vh;
+}
+#index-container li > i {
+    font-size: 7px;
+}
