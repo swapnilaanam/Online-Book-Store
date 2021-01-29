@@ -39,6 +39,13 @@ class BookController extends Controller
             return view('books.index', compact('books'));
 
         }
+        else if($request->has('search_key')) {
+            $search_keyword = $request->get('search_key');
+
+            $books = Book::where('book_name', 'LIKE', '%'.$search_keyword.'%')->paginate(5);
+
+            return view('books.index', compact('books'));
+        }
         
         $books = Book::latest()->paginate(5);
 

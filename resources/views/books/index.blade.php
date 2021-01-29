@@ -62,6 +62,7 @@
         </div>
 
         <div class="col-sm-3">
+            <!-- Form For Search Start -->
             <form action="{{ route('books.index') }}" method="GET">
                 <div class="input-group mb-2">
                     <input type="text" class="form-control" name="search_key" placeholder="Search Book Name...">
@@ -70,6 +71,7 @@
                     </div>
                 </div>
             </form>
+            <!-- Form For Search End -->
         </div>
     </div>
 
