@@ -16,7 +16,7 @@
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm justify-content-between">
                 <a class="navbar-brand ml-3" href="/home">Online Book Store</a>
                 <ul class="navbar-nav mr-3">
-                    <li class="nav-item {{ Request::path() === '/home' ? 'active' : '' }}">
+                    <li class="nav-item {{ Request::path() === 'home' ? 'active' : '' }}">
                         <a href="/home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item {{ Request::path() === 'books/create' ? 'active' : '' }}">
